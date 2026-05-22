@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kevin Caplescu | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { plex: ['"IBM Plex Sans"', 'ui-sans-serif', 'system-ui'] },
+                    boxShadow:  { glow: '0 20px 60px rgba(64,114,255,0.25)' },
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="/static/main.css" />
+</head>
+<body class="min-h-screen bg-[#0b0b0b] font-plex text-white antialiased">
+
+<!-- ── Fixed background ──────────────────────────────────────── -->
+<div class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="bg-orb-primary absolute inset-0"
+         style="background: radial-gradient(900px circle at 50% -150px, rgba(76,128,255,0.32), transparent 68%);"></div>
+    <div class="bg-orb-secondary absolute inset-0"
+         style="background: radial-gradient(600px circle at 80% 40%, rgba(120,200,255,0.07), transparent 60%);"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black via-black/75 to-black"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     SECTION 1 — HERO
+══════════════════════════════════════════════════════════ -->
+<section id="hero" class="hero-section">
+
+    <!-- Decorative corner brackets (hidden on small screens) -->
+    <div class="hero-corner hero-corner-tl hidden md:block"></div>
+    <div class="hero-corner hero-corner-tr hidden md:block"></div>
+    <div class="hero-corner hero-corner-bl hidden md:block"></div>
+    <div class="hero-corner hero-corner-br hidden md:block"></div>
+
+
+    <div class="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto">
+
+        <!-- Eyebrow tag -->
+        <div class="hero-eyebrow mb-5">
+            <span class="section-label">Made in 2026</span>
+        </div>
+
+        <!-- Name -->
+        <h1 id="fullName" class="hero-name text-[52px] font-semibold leading-[1.0] tracking-tight md:text-[76px] lg:text-[88px]">
+            KEVIN<br><span id="lastName">CAPLESCU</span>
+        </h1>
+
+        <!-- Location + Title -->
+        <p class="hero-location mt-4 text-sm text-white/50 tracking-wide md:text-base">
+            United Kingdom &mdash; London
+        </p>
+        <p class="hero-title mt-1 text-sm font-bold text-white/55 tracking-wide md:text-base">
+            Systems Engineer &amp; <span style="color: #52b0f7;">Developer</span>
+        </p>
+
+        <!-- Thin divider -->
+        <div class="hero-divider mt-7 mb-6 w-16 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+
+        <!-- Brief tagline shown in hero -->
+        <p class="hero-desc max-w-md text-sm text-white/45 leading-relaxed md:text-base">
+            Computer Science student with a forward-deployed mindset, building real products at the intersection of engineering and business.
+        </p>
+
+        <!-- Social icons -->
+        <div class="hero-icons mt-8 flex items-center gap-3">
+            <a href="https://www.linkedin.com/in/kevin-cpl/" target="_blank" rel="noreferrer" aria-label="LinkedIn" class="social-icon">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.06c.53-.98 1.82-2.02 3.74-2.02C19.58 8.18 22 10.2 22 14.2V24h-4v-8.2c0-1.96-.04-4.48-2.72-4.48-2.72 0-3.14 2.12-3.14 4.34V24h-4V8z"/>
+                </svg>
+            </a>
+            <a href="mailto:kevincncaplescu@gmail.com" aria-label="Email" class="social-icon">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M2 5.5l10 6 10-6V19H2V5.5zm10 4.6L2 4h20l-10 6.1z"/>
+                </svg>
+            </a>
+            <a href="https://github.com/Kevin-CNC" target="_blank" rel="noreferrer" aria-label="GitHub" class="social-icon">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 .5C5.65.5.5 5.8.5 12.35c0 5.24 3.43 9.68 8.18 11.25.6.12.82-.27.82-.6 0-.3-.02-1.28-.02-2.33-3.01.56-3.79-.74-4.03-1.43-.14-.36-.74-1.43-1.27-1.71-.45-.24-1.1-.84-.01-.86 1.03-.02 1.77.98 2.01 1.38 1.17 1.98 3.03 1.42 3.77 1.08.12-.86.46-1.42.84-1.74-2.67-.32-5.46-1.4-5.46-6.16 0-1.36.46-2.48 1.22-3.35-.12-.32-.54-1.62.12-3.36 0 0 1-.32 3.3 1.28.96-.28 1.98-.42 3-.42 1.02 0 2.04.14 3 .42 2.3-1.62 3.3-1.28 3.3-1.28.66 1.74.24 3.04.12 3.36.76.87 1.22 1.97 1.22 3.35 0 4.78-2.8 5.84-5.48 6.16.48.42.9 1.24.9 2.52 0 1.82-.02 3.28-.02 3.74 0 .34.22.74.82.6 4.76-1.57 8.18-6.01 8.18-11.25C23.5 5.8 18.35.5 12 .5z"/>
+                </svg>
+            </a>
+        </div>
+
+        <!-- CTA row -->
+        <div class="hero-cta mt-6 flex flex-wrap items-center justify-center gap-3">
+            <button class="cta-button" data-scroll="about">
+                More
+                <svg class="h-3.5 w-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M8 3v10M3 9l5 5 5-5"/>
+                </svg>
+            </button>
+            <a href="/static/Kevin Caplescu-CV.pdf" download class="cta-button-ghost">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M8 2v8M4 7l4 4 4-4M2 13h12"/>
+                </svg>
+                Download CV
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECTION 2 — ABOUT
+══════════════════════════════════════════════════════════ -->
+<section id="about" class="relative w-full max-w-4xl mx-auto px-6 py-28" data-reveal>
+
+    <div class="flex flex-col md:flex-row md:items-start gap-12">
+
+        <!-- Left: label + heading -->
+        <div class="md:w-80 flex-shrink-0">
+            <div class="section-label mb-4">About me</div>
+            <h2 class="text-2xl font-semibold leading-snug md:text-3xl">
+                Forward-deployed<br/>
+                <span style="color:#52b0f7;">mindset</span> &amp; passion<br/>
+                for technology.
+            </h2>
+        </div>
+
+        <!-- Right: body copy + highlights -->
+        <div class="flex-1 space-y-5">
+            <p class="text-sm text-white/60 leading-relaxed md:text-base">
+                Computer Science student with an eye for technology and its' client-facing impact and applications. I thrive at the intersection of engineering and business, where I can translate complex technical concepts into real-world solutions that drive value.
+            </p>
+            <p class="text-sm text-white/60 leading-relaxed md:text-base">
+                Developing my core engineering skills to further understand the products, from ideation to deployment, while also building a strong foundation in pre-sales engineering and customer engagement. I am passionate about leveraging technology to solve real problems and am eager to contribute my skills and enthusiasm to innovative projects.
+            </p>
+
+            <!-- Highlight chips -->
+            <div class="pt-2 flex flex-wrap gap-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-white/70">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#52b0f7]"></span>Pre-Sales Engineering
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-white/70">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#52b0f7]"></span>Full-Stack Development
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-white/70">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#52b0f7]"></span>Workflow Automation
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-white/70">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#52b0f7]"></span>AI &amp; Infrastructure
+                </span>
+            </div>
+
+            <div class="pt-2">
+                <button class="cta-button" data-scroll="experience">
+                    View my experience
+                    <svg class="h-3.5 w-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M8 3v10M3 9l5 5 5-5"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECTION 3 — EXPERIENCE / TABS
+══════════════════════════════════════════════════════════ -->
+<section id="experience" class="relative w-full max-w-4xl mx-auto px-6 pb-28" data-reveal>
+
+    <!-- Section header -->
+    <div class="flex flex-col items-center text-center mb-10">
+        <div class="section-label mb-4">Experience</div>
+        <h2 class="text-2xl font-semibold md:text-3xl">Education, Work &amp; Tech</h2>
+    </div>
+
+    <!-- ── Slider tab bar ──────────────────────────────────── -->
+    <div class="flex justify-center mb-8">
+        <div class="tab-track" id="tabTrack" role="tablist">
+            <!-- Sliding white indicator pill -->
+            <div class="tab-indicator" id="tabIndicator"></div>
+
+            <button type="button" class="tab-button" data-tab="education"
+                    data-active="true" role="tab" aria-selected="true" aria-controls="panel-education">
+                Education
+            </button>
+            <button type="button" class="tab-button" data-tab="work"
+                    data-active="false" role="tab" aria-selected="false" aria-controls="panel-work">
+                Work Experience
+            </button>
+            <button type="button" class="tab-button" data-tab="tools"
+                    data-active="false" role="tab" aria-selected="false" aria-controls="panel-tools">
+                Tech &amp; Tools
+            </button>
+        </div>
+    </div>
+
+    <!-- ── Tab panels ─────────────────────────────────────── -->
+    <div class="tab-panels" data-tab-panels>
+
+        <!-- ── EDUCATION PANEL ──────────────────────────── -->
+        <div class="tab-panel" data-panel="education" data-active="true" id="panel-education" role="tabpanel">
+            <div class="rounded-[24px] border border-white/8 bg-gradient-to-br from-white/8 via-white/4 to-white/8 p-6 md:p-8">
+
+                <div class="roadmap" data-stagger="1">
+                    <div class="roadmap-line"></div>
+
+                    <!-- Entry: City, University of London -->
+                    <div class="roadmap-entry" data-stagger="2">
+                        <div class="roadmap-node">
+                            <!--
+                                HOW TO ADD YOUR LOGO:
+                                Replace the style attribute below with:
+                                style="background-image: url('/static/logos/city.png');"
+                                The image will fill the circle automatically.
+                            -->
+                            <div class="roadmap-circle"
+                                 data-initials="CITY"
+                                 style="background-image: url('/static/logos/city.png'); background-color: #fff;">
+                            </div>
+                        </div>
+                        <div class="roadmap-content" data-stagger="3">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-1">
+                                <div class="text-base font-semibold text-white">City, University of London</div>
+                                <div class="text-xs text-white/50 font-mono mt-0.5">2024 – 2028</div>
+                            </div>
+                            <div class="text-sm text-white font-medium mb-3">Computer Science — BSc with Foundation Year</div>
+
+                            <div class="mb-3" data-stagger="4">
+                                <div class="text-[10px] font-bold uppercase tracking-[0.16em] text-white/35 mb-1.5">Relevant Modules</div>
+                                <ul class="space-y-0.5 text-sm text-white/60">
+                                    <li>Java Programming, Advanced Python Programming</li>
+                                    <li>Software Development Lifecycle, AI &amp; Ethics</li>
+                                    <li>Algorithms and Data Structures</li>
+                                </ul>
+                            </div>
+
+                            <div data-stagger="5">
+                                <div class="text-[10px] font-bold uppercase tracking-[0.16em] text-white/35 mb-1.5">Meritocracy</div>
+                                <ul class="space-y-0.5 text-sm text-white/60">
+                                    <li>Vice-President, City's Computer Science Society</li>
+                                    <li>Top 3 highest achievers — Foundation Year 2024-2025</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add more education entries here in the same pattern -->
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ── WORK EXPERIENCE PANEL ─────────────────────── -->
+        <div class="tab-panel" data-panel="work" data-active="false" id="panel-work" role="tabpanel">
+            <div class="rounded-[24px] border border-white/8 bg-gradient-to-br from-white/8 via-white/4 to-white/8 p-6 md:p-8">
+
+                <div class="roadmap" data-stagger="1">
+                    <div class="roadmap-line"></div>
+
+                    <!-- Entry: Ruckus Networks -->
+                    <div class="roadmap-entry" data-stagger="2">
+                        <div class="roadmap-node">
+                            <!--
+                                HOW TO ADD YOUR LOGO:
+                                Replace the style attribute with:
+                                style="background-image: url('/static/logos/ruckus.png'); background-color: #f97316;"
+                            -->
+                            <div class="roadmap-circle"
+                                 data-initials="RKS"
+                                 style="background-image: url('/static/logos/ruckus.jpg'); background-color: #f97316;">
+                            </div>
+                        </div>
+                        <div class="roadmap-content" data-stagger="3">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-1">
+                                <div class="text-base font-semibold text-white">RUCKUS NETWORKS</div>
+                                <div class="text-xs text-white/50 font-mono mt-0.5">Jun 2025 – Jun 2026</div>
+                            </div>
+                            <div class="text-sm text-[#f38e46] font-medium mb-3">Systems Engineer Intern</div>
+
+                            <ul class="space-y-1.5 text-sm text-white/60" data-stagger="4">
+                                <li class="flex gap-2">
+                                    <span class="mt-1.5 w-1 h-1 rounded-full bg-[#52b0f7] flex-shrink-0"></span>
+                                    Mastered Ruckus One AI Cloud through end-to-end technical delivery and partner demonstrations.
+                                </li>
+                                <li class="flex gap-2" data-stagger="5">
+                                    <span class="mt-1.5 w-1 h-1 rounded-full bg-[#52b0f7] flex-shrink-0"></span>
+                                    Supported go-to-market strategies by producing technical comparisons and enabling customer-facing workshops. Supported SEs with pre-staging equipment and proof-of-concept setups.
+                                </li>
+                                <li class="flex gap-2" data-stagger="6">
+                                    <span class="mt-1.5 w-1 h-1 rounded-full bg-[#52b0f7] flex-shrink-0"></span>
+                                    Deployed automation workflows reducing equipment loss by 10% across UK &amp; Benelux.
+                                </li>
+                                <li class="flex gap-2" data-stagger="7">
+                                    <span class="mt-1.5 w-1 h-1 rounded-full bg-[#52b0f7] flex-shrink-0"></span>
+                                    Architected a full-stack Python/SQL self-service portal to automate lab reservations across EMEA.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Add more work entries here in the same pattern -->
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ── TECH & TOOLS PANEL ─────────────────────────── -->
+        <div class="tab-panel" data-panel="tools" data-active="false" id="panel-tools" role="tabpanel">
+            <div class="rounded-[24px] border border-white/8 bg-gradient-to-br from-white/8 via-white/4 to-white/8 p-6 md:p-8">
+                <div class="space-y-7">
+
+                    <div data-stagger="1">
+                        <div class="text-[10px] font-bold uppercase tracking-[0.16em] text-white/35 mb-4 italic">Programming &amp; Development</div>
+                        <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+                            <div class="skill-badge flex items-center gap-2.5 text-white/75" data-stagger="2">
+                                <div class="skill-icon">
+                                    <img src="/static/logos/svgs/python.svg" alt="" aria-hidden="true" class="skill-logo logo-mono" loading="lazy" />
+                                </div>
+                                <span class="text-xs">Python</span>
+                            </div>
+                            <div class="skill-badge flex items-center gap-2.5 text-white/75" data-stagger="3">
+                                <div class="skill-icon">
+                                    <img src="/static/logos/svgs/htmlAndCSS.svg" alt="" aria-hidden="true" class="skill-logo" loading="lazy" />
+                                </div>
+                                <span class="text-xs">HTML / CSS</span>
+                            </div>
+                            <div class="skill-badge flex items-center gap-2.5 text-white/75" data-stagger="4">
+                                <div class="skill-icon">
+                                    <img src="/static/logos/svgs/sql.svg" alt="" aria-hidden="true" class="skill-logo logo-mono" loading="lazy" />
+                                </div>
+                                <span class="text-xs">SQL</span>
+                            </div>
+                            <div class="skill-badge flex items-center gap-2.5 text-white/75" data-stagger="5">
+                                <div class="skill-icon">
+                                    <img src="/static/logos/svgs/java.svg" alt="" aria-hidden="true" class="skill-logo logo-mono" loading="lazy" />
+                                </div>
+                                <span class="text-xs">Java</span>
+                            </div>
+                            <div class="skill-badge flex items-center gap-2.5 text-white/75" data-stagger="6">
+                                <div class="skill-icon text-xs font-bold">
+                                    <img src="/static/logos/svgs/lnx.svg" alt="" aria-hidden="true" class="skill-logo logo-mono" loading="lazy" />
+                                </div>
+                                <span class="text-xs">Linux / WSL</span>
+                            </div>
+                            <div class="skill-badge flex items-center gap-2.5 text-white/75" data-stagger="7">
+                                <div class="skill-icon">
+                                    <img src="/static/logos/svgs/git.svg" alt="" aria-hidden="true" class="skill-logo logo-mono" loading="lazy" />
+                                </div>
+                                <span class="text-xs">Git</span>
+                            </div>
+                            <div class="skill-badge flex items-center gap-2.5 text-white/75" data-stagger="8">
+                                <div class="skill-icon">
+                                    <img src="/static/logos/svgs/github-actions.svg" alt="" aria-hidden="true" class="skill-logo logo-mono" loading="lazy" />
+                                </div>
+                                <span class="text-xs">GitHub Actions</span>
+                            </div>
+                            <div class="skill-badge flex items-center gap-2.5 text-white/75" data-stagger="9">
+                                <div class="skill-icon">
+                                    <img src="/static/logos/svgs/postgresql.svg" alt="" aria-hidden="true" class="skill-logo logo-mono" loading="lazy" />
+                                </div>
+                                <span class="text-xs">PostgreSQL</span>
+                            </div>
+                            <div class="skill-badge flex items-center gap-2.5 text-white/75" data-stagger="10">
+                                <div class="skill-icon">
+                                    <img src="/static/logos/svgs/docker.svg" alt="" aria-hidden="true" class="skill-logo logo-mono" loading="lazy" />
+                                </div>
+                                <span class="text-xs">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-stagger="11">
+                        <div class="text-[10px] font-bold uppercase tracking-[0.16em] text-white/35 mb-4 italic">Automation &amp; Workflows</div>
+                        <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
+                            <div class="skill-badge flex items-center gap-2.5 text-white/75">
+                                <div class="skill-icon text-xs font-bold">API</div>
+                                <span class="text-xs">REST API</span>
+                            </div>
+                            <div class="skill-badge flex items-center gap-2.5 text-white/75">
+                                <div class="skill-icon">
+                                    <img src="/static/logos/svgs/n8n.svg" alt="" aria-hidden="true" class="skill-logo" loading="lazy" />
+                                </div>
+                                <span class="text-xs">n8n</span>
+                            </div>
+                            <div class="skill-badge flex items-center gap-2.5 text-white/75">
+                                <div class="skill-icon">
+                                    <img src="/static/logos/svgs/activepieces.png" alt="" aria-hidden="true" class="skill-logo" loading="lazy" />
+                                </div>
+                                <span class="text-xs">ActivePieces</span>
+                            </div>
+                            <div class="skill-badge flex items-center gap-2.5 text-white/75">
+                                <div class="skill-icon">
+                                    <img src="/static/logos/svgs/openrouter.png" alt="" aria-hidden="true" class="skill-logo logo-mono" loading="lazy" />
+                                </div>
+                                <span class="text-xs">OpenRouter</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-stagger="12">
+                        <div class="text-[10px] font-bold uppercase tracking-[0.16em] text-white/35 mb-4 italic">Communications &amp; Business Ops</div>
+                        <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
+                            <div class="skill-badge flex items-center gap-2.5 text-white/75">
+                                <div class="skill-icon">
+                                    <img src="/static/logos/svgs/microsoft-teams.svg" alt="" aria-hidden="true" class="skill-logo logo-mono" loading="lazy" />
+                                </div>
+                                <span class="text-xs">MS Teams</span>
+                            </div>
+                            <div class="skill-badge flex items-center gap-2.5 text-white/75">
+                                <div class="skill-icon">
+                                    <img src="/static/logos/svgs/sharepoint.svg" alt="" aria-hidden="true" class="skill-logo logo-mono" loading="lazy" />
+                                </div>
+                                <span class="text-xs">SharePoint</span>
+                            </div>
+                            <div class="skill-badge flex items-center gap-2.5 text-white/75">
+                                <div class="skill-icon">
+                                    <img src="/static/logos/svgs/atlassian.svg" alt="" aria-hidden="true" class="skill-logo logo-mono" loading="lazy" />
+                                </div>
+                                <span class="text-xs">Atlassian</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div><!-- /tab-panels -->
+</section>
+<script src="static/main.js"></script>
+</body>
+</html>

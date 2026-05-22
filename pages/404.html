@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page Not Found | Kevin Caplescu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { plex: ['"IBM Plex Sans"', 'ui-sans-serif', 'system-ui'] },
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="/static/main.css" />
+</head>
+<body class="min-h-screen bg-[#0b0b0b] font-plex text-white antialiased">
+
+<!-- ── Fixed background ──────────────────────────────────────── -->
+<div class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="bg-orb-primary absolute inset-0"
+         style="background: radial-gradient(900px circle at 50% -150px, rgba(76,128,255,0.32), transparent 68%);"></div>
+    <div class="bg-orb-secondary absolute inset-0"
+         style="background: radial-gradient(600px circle at 80% 40%, rgba(120,200,255,0.07), transparent 60%);"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black via-black/75 to-black"></div>
+</div>
+
+<section class="hero-section">
+    <div class="hero-corner hero-corner-tl hidden md:block"></div>
+    <div class="hero-corner hero-corner-tr hidden md:block"></div>
+    <div class="hero-corner hero-corner-bl hidden md:block"></div>
+    <div class="hero-corner hero-corner-br hidden md:block"></div>
+
+    <div class="relative z-10 flex flex-col items-center text-center max-w-2xl mx-auto">
+        <div class="section-label mb-5">Page not found</div>
+
+        <h1 class="text-[72px] font-semibold leading-none tracking-tight md:text-[104px]">
+            404
+        </h1>
+        <p class="mt-4 text-sm text-white/55 tracking-wide md:text-base">
+            That page does not exist or moved.
+        </p>
+
+        <div class="hero-divider mt-7 mb-6 w-16 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+
+        <p class="max-w-md text-sm text-white/45 leading-relaxed md:text-base">
+            Use button below to return home and continue exploring portfolio.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <a href="/" class="cta-button">
+                Back to home
+                <svg class="h-3.5 w-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 3l-4 5 4 5"/>
+                    <path d="M2 8h12"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
